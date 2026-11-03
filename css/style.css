@@ -1,0 +1,231 @@
+/* ================================================================
+   Atividade acadêmica: MBL e Partido Missão
+   CSS externo compartilhado pelas páginas HTML (Aula 09)
+   Paleta inspirada nas cores da identidade visual do partido:
+     Amarelo: #FBBD24 | Preto: #141414 | Branco: #FFFFFF
+   Para mudar as cores desta página, altere as variáveis abaixo.
+   ================================================================ */
+
+:root {
+    --amarelo: #fbbd24;
+    --amarelo-escuro: #cc8f00;
+    --preto: #141414;
+    --preto-suave: #252525;
+    --branco: #ffffff;
+    --fundo: #f7f7f4;
+    --fundo-menu: #fff9e9;
+    --destaque-claro: #fff5d6;
+    --texto: #252525;
+    --texto-suave: #5b5b5b;
+    --borda: #e8e3d6;
+    --raio: 14px;
+    --sombra: 0 9px 32px rgba(20,20,20,.075);
+}
+
+/* 1. Regras básicas e acessibilidade */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: var(--fundo);
+    color: var(--texto);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+}
+a { color: #775000; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: #3c2900; }
+a:focus-visible {
+    outline: 3px solid var(--amarelo-escuro);
+    outline-offset: 3px;
+    border-radius: 3px;
+}
+::selection { background: var(--amarelo); color: var(--preto); }
+
+/* 2. Cabeçalho: amarelo, preto e branco */
+#header {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 25px 28px 26px;
+    border-top: 7px solid var(--amarelo);
+    border-radius: 0;
+    background: linear-gradient(115deg, var(--preto) 0%, #292929 100%);
+    color: var(--branco);
+    text-align: center;
+}
+#header::before {
+    content: "MISSÃO 14  •  ATIVIDADE ACADÊMICA";
+    display: inline-block;
+    padding: 3px 12px;
+    margin-bottom: 8px;
+    border: 1px solid rgba(251,189,36,.5);
+    border-radius: 100px;
+    color: var(--amarelo);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+}
+#header h1 {
+    margin: 6px 0 4px;
+    font-size: clamp(25px, 4vw, 35px);
+    line-height: 1.2;
+    letter-spacing: -.6px;
+}
+#header p { margin: 0; color: #e1e1e1; font-size: 14px; }
+
+/* 3. Layout em duas colunas e menu lateral */
+#container {
+    display: grid;
+    grid-template-columns: 20% minmax(0, 1fr);
+    flex: 1;
+    width: 100%;
+    max-width: none;
+    min-height: 0;
+    margin: 0;
+    border-left: 1px solid var(--borda);
+    border-right: 1px solid var(--borda);
+    background: var(--branco);
+    box-shadow: none;
+}
+#menu {
+    padding: 25px 15px 28px;
+    border-right: 1px solid #eddba5;
+    background: var(--fundo-menu);
+}
+#menu::before {
+    content: "EXPLORAR O PROJETO";
+    display: block;
+    padding: 0 11px 11px;
+    color: #756338;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+}
+#menu ul { list-style: none; margin: 0; padding: 0; }
+#menu li { margin: 0 0 6px; }
+#menu a {
+    display: block;
+    padding: 11px 12px;
+    border-left: 4px solid transparent;
+    border-radius: 7px;
+    color: var(--preto);
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 600;
+    transition: background-color .15s ease, border-color .15s ease;
+}
+#menu a:hover { border-color: var(--amarelo); background: #f4e8c1; }
+#menu a[aria-current="page"] {
+    border-color: var(--amarelo);
+    background: var(--amarelo);
+    color: var(--preto);
+    font-weight: 800;
+}
+
+/* 4. Conteúdo principal */
+#main {
+    min-width: 0;
+    padding: 34px clamp(20px, 4vw, 50px) 50px;
+    background: var(--branco);
+}
+#main h2 {
+    margin: 0 0 20px;
+    padding-bottom: 14px;
+    border-bottom: 3px solid var(--amarelo);
+    color: var(--preto);
+    font-size: clamp(24px, 3vw, 30px);
+    line-height: 1.25;
+}
+#main h3 {
+    margin: 28px 0 10px;
+    color: var(--preto);
+    font-size: 19px;
+    line-height: 1.3;
+}
+#main p { margin: 0 0 16px; line-height: 1.8; text-align: left; }
+#main ul, #main ol { padding-left: 23px; }
+#main li { padding-left: 2px; margin: 6px 0; line-height: 1.7; }
+#main li::marker { color: var(--amarelo-escuro); }
+#main strong { color: #191919; }
+#main > p:last-child { margin-top: 24px; }
+
+/* 5. Caixas de informação e cartões de fontes */
+.destaque {
+    max-width: 100%;
+    margin: 20px 0 26px;
+    padding: 17px 21px;
+    border-left: 5px solid var(--amarelo);
+    border-radius: 0 9px 9px 0;
+    background: var(--destaque-claro);
+}
+.destaque p { margin: 5px 0 !important; }
+.referencias { list-style: none; padding: 0 !important; }
+.referencias li {
+    padding: 15px 17px !important;
+    margin: 10px 0 !important;
+    border: 1px solid var(--borda);
+    border-left: 4px solid var(--amarelo);
+    border-radius: 8px;
+    background: #fffefa;
+}
+.referencias li a { font-weight: 700; }
+.referencias small {
+    display: block;
+    margin-top: 5px;
+    color: var(--texto-suave);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* 6. Imagens e legendas (mantém fotos existentes) */
+figure {
+    max-width: 710px;
+    margin: 18px 0 28px;
+    overflow: hidden;
+    border: 1px solid var(--borda);
+    border-radius: 11px;
+    background: #fffdf8;
+}
+figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 440px;
+    object-fit: contain;
+    background: #f5f5f5;
+}
+figcaption {
+    padding: 11px 14px;
+    border-top: 1px solid var(--borda);
+    color: var(--texto-suave);
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+/* 7. Rodapé compartilhado */
+#footer {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 21px;
+    border-top: 4px solid var(--amarelo);
+    border-radius: 0;
+    background: var(--preto);
+    color: var(--branco);
+    text-align: center;
+    font-size: 13px;
+}
+#footer p { margin: 0; }
+
+/* 8. Layout desktop: ocupa a largura e a altura disponíveis.
+   Sem regras especiais de adaptação para celulares. */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
+}

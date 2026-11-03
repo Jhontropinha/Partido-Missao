@@ -1,0 +1,240 @@
+/* ============================================================
+   PÁGINA 6 — FATO OU FAKE?
+   Estilos exclusivos da página 6; importa também css/style.css.
+   O layout principal (cabeçalho, menu, conteúdo e rodapé)
+   continua definido pela folha compartilhada do projeto.
+   ============================================================ */
+
+/* 1. Introdução à checagem */
+.pagina-verificacao .cabecalho-checagem {
+    margin-bottom: 24px;
+}
+
+.pagina-verificacao .etiqueta-superior {
+    margin: 0 0 8px !important;
+    color: #856000;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.pagina-verificacao .subtitulo-checagem {
+    max-width: 820px;
+    font-size: 17px;
+    color: #4b4b4b;
+}
+
+.pagina-verificacao .introducao-checagem {
+    margin: 15px 0 30px;
+}
+
+/* 2. Imagem e resumo visual */
+.pagina-verificacao .apresentacao-visual {
+    display: grid;
+    grid-template-columns: minmax(0, 1.65fr) minmax(220px, 1fr);
+    align-items: stretch;
+    gap: 22px;
+    margin: 12px 0 36px;
+}
+
+.pagina-verificacao .imagem-checagem {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+}
+
+.pagina-verificacao .imagem-bandeira img {
+    width: 100%;
+    max-height: 335px;
+    object-fit: cover;
+}
+
+.pagina-verificacao .resumo-visual {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 30px;
+    border-radius: 12px;
+    background: #181818;
+    color: #fff;
+}
+
+.pagina-verificacao .resumo-numero {
+    color: var(--amarelo);
+    font-size: 70px;
+    line-height: 1;
+    font-weight: 900;
+}
+
+.pagina-verificacao .resumo-visual strong {
+    margin-top: 14px;
+    color: #fff !important;
+    font-size: 19px;
+}
+
+.pagina-verificacao .resumo-visual p {
+    margin-top: 10px !important;
+    color: #dedede;
+    font-size: 14px;
+}
+
+.pagina-verificacao .atalho-checagem {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 14px;
+    border-radius: 7px;
+    background: var(--amarelo);
+    color: #171717;
+    font-weight: 800;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+/* 3. Títulos e estrutura das seções */
+.pagina-verificacao .bloco-checagens,
+.pagina-verificacao .bloco-fontes {
+    max-width: 1180px;
+    margin: 0 0 38px;
+}
+
+.pagina-verificacao h3.titulo-secao {
+    margin: 0 0 15px !important;
+    padding-left: 14px;
+    border-left: 5px solid var(--amarelo);
+    color: #171717;
+    font-size: 22px !important;
+}
+
+.pagina-verificacao .nota-metodologia {
+    max-width: 960px;
+    color: #606060;
+    font-size: 14px;
+}
+
+/* 4. Cartões de casos reais checados */
+.pagina-verificacao .cartao-checagem {
+    margin: 18px 0;
+    padding: 24px 28px;
+    border: 1px solid #e5dfd2;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(22, 22, 22, .055);
+    background: #fff;
+}
+
+.pagina-verificacao .topo-cartao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    margin-bottom: 13px;
+}
+
+.pagina-verificacao .numero-caso {
+    color: #675636;
+    font-weight: 800;
+    font-size: 12px;
+    letter-spacing: .6px;
+}
+
+.pagina-verificacao .veredito {
+    display: inline-block;
+    padding: 5px 11px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 900;
+    line-height: 1.4;
+    letter-spacing: .7px;
+}
+
+.pagina-verificacao .veredito.falso {
+    color: #821616;
+    background: #fff0ed;
+    border: 1px solid #eac1bb;
+}
+
+.pagina-verificacao .veredito.fato {
+    color: #195a32;
+    background: #eaf8ee;
+    border: 1px solid #b7ddc4;
+}
+
+.pagina-verificacao .veredito.impreciso {
+    color: #795200;
+    background: #fff4cd;
+    border: 1px solid #f1d990;
+}
+
+.pagina-verificacao .cartao-checagem h4 {
+    margin: 0 0 16px;
+    color: #202020;
+    font-size: 20px;
+    line-height: 1.35;
+}
+
+.pagina-verificacao .cartao-checagem p {
+    margin: 10px 0;
+    font-size: 15px;
+}
+
+.pagina-verificacao .detalhe-fonte {
+    margin: 17px 0 0 !important;
+    padding: 13px 15px;
+    border-radius: 8px;
+    background: #fff8e8;
+    font-size: 14px !important;
+}
+
+.pagina-verificacao .cartao-fato {
+    border-left: 5px solid #4eaa72;
+}
+
+/* 5. Declarações verificadas, com a mesma régua jornalística */
+.pagina-verificacao .grade-declaracoes {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+    margin: 21px 0 14px;
+}
+
+.pagina-verificacao .cartao-curto {
+    padding: 19px;
+    border: 1px solid #e9e2d8;
+    border-radius: 10px;
+    background: #fffcf6;
+}
+
+.pagina-verificacao .cartao-curto h4 {
+    margin: 14px 0 10px;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.pagina-verificacao .cartao-curto p {
+    font-size: 14px;
+}
+
+.pagina-verificacao .fonte-declaracoes {
+    padding: 13px 15px;
+    border-radius: 8px;
+    background: #fff8e8;
+    font-size: 14px;
+}
+
+/* 6. Orientações e lista de fontes */
+.pagina-verificacao .passos-verificacao {
+    max-width: 1050px;
+    padding-left: 25px;
+}
+
+.pagina-verificacao .passos-verificacao li {
+    margin-bottom: 12px;
+}
+
+.pagina-verificacao .bloco-fontes {
+    margin-bottom: 0;
+}
+
+.pagina-verificacao .voltar-inicio {
+    margin-top: 25px;
+}
