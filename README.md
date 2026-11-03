@@ -56,6 +56,6 @@ Como a página inicial está dentro de `html/`, abra esse arquivo para visualiza
 
 ## Fontes e créditos
 
-As páginas apresentam links para fontes jornalísticas e institucionais, incluindo o Tribunal Superior Eleitoral (TSE), Agência Brasil, Agência Lupa, Aos Fatos, UOL Confere e outras referências citadas no próprio conteúdo. Imagens externas dependem de conexão com a internet e mantêm seus créditos e links de origem junto às páginas.
+As páginas apresentam links para fontes jornalísticas e institucionais, incluindo o Tribunal Superior Eleitoral (TSE), Imagens externas dependem de conexão com a internet e mantêm seus créditos e links de origem junto às páginas.
 
 Consulte as referências diretamente antes de reutilizar informações ou imagens.
