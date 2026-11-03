@@ -16,7 +16,6 @@ O site possui uma página inicial e seis páginas temáticas:
 | [Página 3](html/pagina3.html) | Propostas políticas |
 | [Página 4](html/pagina4.html) | Participação do Partido Missão nas eleições de 2026 |
 | [Página 5](html/pagina5.html) | Fontes e referências utilizadas no projeto |
-| [Página 6](html/pagina6.html) | Checagem de alegações sobre Renan Santos e o Partido Missão |
 
 As páginas compartilham um menu de navegação. A Página 6 tem uma folha de estilo adicional para os cartões e seções de checagem.
 
@@ -34,7 +33,7 @@ Partido-Missao/
 │   ├── pagina3.html
 │   ├── pagina4.html
 │   ├── pagina5.html
-│   └── pagina6.html
+│ 
 └── img/
     └── criação do partido missão.webp
 ```
